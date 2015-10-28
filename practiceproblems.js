@@ -146,9 +146,9 @@ fibSequence(12);
 
 var split;
 var splitTwo;
-var firstLetter='';
+var firstLetter = '';
 var ay;
-var piggy=[];
+var piggy = [];
 function translatePig(string) {
     split = string.split(" ");
     console.log(split);
@@ -159,33 +159,12 @@ function translatePig(string) {
         splitTwo.shift();
         splitTwo.push(firstLetter);
         splitTwo = splitTwo.join("").toLowerCase();
-        ay = splitTwo+'ay ';
+        ay = splitTwo + 'ay ';
         piggy.push(ay);
     }
     console.log(piggy);
-    string=piggy.join("");
+    string = piggy.join("");
     console.log(string);
+}
 
-    /*for (var j = 0; j < splitTwo.length; j++) {
-        firstLetter += splitTwo[0];
-        console.log(firstLetter);
-
-        /*if (splitTwo[0] == 'a' || 'e' || 'i' || 'o' || 'u') {
-            console.log(splitTwo.join('') + 'yay')
-        } */
-    }
-/*
-            else {
-                console.log()
-                firstLetter += splitTwo[0].value;
-                //console.log(firstLetter);
-                /*splitTwo[0].shift();
-                splitTwo.push(firstLetter);
-                splitTwo.join(''); */
-
-            /*console.log(splitTwo);
-        }
-    }
-
-} */
 translatePig('What a beautiful morning');
