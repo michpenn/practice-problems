@@ -52,9 +52,9 @@ function oneToMulti(futureMultidimensionalArray) {
     var arrayNumber = [];
     var arrayBoolean = [];
     var checkTheType;
-    for(i=0; i<futureMultidimensionalArray.length; i++) {
-     checkTheType= futureMultidimensionalArray[i];
-        switch(typeof checkTheType) {
+    for (i = 0; i < futureMultidimensionalArray.length; i++) {
+        checkTheType = futureMultidimensionalArray[i];
+        switch (typeof checkTheType) {
             case 'string':
                 arrayString.push(checkTheType);
                 break;
@@ -74,3 +74,27 @@ function oneToMulti(futureMultidimensionalArray) {
 }
 
 oneToMulti(multiTypeArray);
+
+/**
+ * Practice Problem 4
+ * @type {string[]}
+ */
+var arrayToAlphabetize = ['mouse', 'cat', 'dog', 'human'];
+
+function alphabetize(soonToBeAtoZ) {
+    var temp;
+    do {
+        temp = false;
+        for (var i = 0; i < soonToBeAtoZ.length - 1; i++) {
+            if (soonToBeAtoZ[i] > soonToBeAtoZ[i + 1]) {
+                var temp2 = soonToBeAtoZ[i];
+                soonToBeAtoZ[i] = soonToBeAtoZ[i + 1];
+                soonToBeAtoZ[i + 1] = temp2;
+                temp = true;
+            }
+        }
+    } while (temp);
+    console.log(soonToBeAtoZ)
+}
+
+alphabetize(arrayToAlphabetize);
