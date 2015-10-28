@@ -125,18 +125,67 @@ fizzBuzz();
  * @type {Array}
  */
 var fib = [];
+var fib2;
 
 function fibSequence(number) {
     var newValue;
-    var counter=number;
-    fib[0]=0;
-    fib[1]=1;
-    for(var i=2; i<counter; i++) {
-        fib[i]= fib[i-2] +fib[i-1];
+    var counter = number;
+    fib[0] = 0;
+    fib[1] = 1;
+    for (var i = 2; i < counter; i++) {
+        fib[i] = fib[i - 2] + fib[i - 1];
         newValue = fib[i];
         fib.push(newValue);
     }
-    console.log(fib);
+    fib2 = fib.join();
+    console.log(fib2);
 }
 
 fibSequence(12);
+
+
+var split;
+var splitTwo;
+var firstLetter='';
+var ay;
+var piggy=[];
+function translatePig(string) {
+    split = string.split(" ");
+    console.log(split);
+    for (var i = 0; i < split.length; i++) {
+        firstLetter = '';
+        splitTwo = split[i].split("");
+        firstLetter += splitTwo[0];
+        splitTwo.shift();
+        splitTwo.push(firstLetter);
+        splitTwo = splitTwo.join("").toLowerCase();
+        ay = splitTwo+'ay ';
+        piggy.push(ay);
+    }
+    console.log(piggy);
+    string=piggy.join("");
+    console.log(string);
+
+    /*for (var j = 0; j < splitTwo.length; j++) {
+        firstLetter += splitTwo[0];
+        console.log(firstLetter);
+
+        /*if (splitTwo[0] == 'a' || 'e' || 'i' || 'o' || 'u') {
+            console.log(splitTwo.join('') + 'yay')
+        } */
+    }
+/*
+            else {
+                console.log()
+                firstLetter += splitTwo[0].value;
+                //console.log(firstLetter);
+                /*splitTwo[0].shift();
+                splitTwo.push(firstLetter);
+                splitTwo.join(''); */
+
+            /*console.log(splitTwo);
+        }
+    }
+
+} */
+translatePig('What a beautiful morning');
