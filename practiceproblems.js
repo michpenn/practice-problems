@@ -143,7 +143,9 @@ function fibSequence(number) {
 
 fibSequence(12);
 
-
+/**
+ * Practice Problem 6
+ */
 var split;
 var splitTwo;
 var firstLetter = '';
