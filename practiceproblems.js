@@ -116,6 +116,27 @@ function fizzBuzz() {
         else {
             console.log(i);
         }
-            }
     }
+}
 fizzBuzz();
+
+/**
+ * Practice Problem 6
+ * @type {Array}
+ */
+var fib = [];
+
+function fibSequence(number) {
+    var newValue;
+    var counter=number;
+    fib[0]=0;
+    fib[1]=1;
+    for(var i=2; i<counter; i++) {
+        fib[i]= fib[i-2] +fib[i-1];
+        newValue = fib[i];
+        fib.push(newValue);
+    }
+    console.log(fib);
+}
+
+fibSequence(12);
